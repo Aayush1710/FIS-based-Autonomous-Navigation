@@ -1,4 +1,4 @@
-# FIS-based-Autonomous-Navigation
+# FIS based Autonomous Navigation
 This code is done in MATLAB.
 The project consists basically in setting 2 fuzzy systems to reach the target. 
 The first one is a MISO system to avoid that the car does not crash with an obstacle. The two inputs of the system are the left and right sensors of the car, and the output increases or decreases the angular velocity. Each discursive universe is normalized to simplify every modification to the control system. 
