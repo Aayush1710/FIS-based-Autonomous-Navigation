@@ -1,0 +1,43 @@
+[System]
+Name='fuzzyPD'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=6
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='error'
+Range=[-1 1]
+NumMFs=3
+MF1='N':'trapmf',[-1.71470899470899 -1.07470899470899 -0.594708994708995 0.00529100529100512]
+MF2='Z':'trimf',[-0.3 0 0.3]
+MF3='P':'trapmf',[0 0.6 1.08 1.72]
+
+[Input2]
+Name='velocity'
+Range=[-1 1]
+NumMFs=2
+MF1='N':'trapmf',[-1.72 -1.08 -0.4 0.2]
+MF2='P':'trapmf',[-0.2 0.4 1 2]
+
+[Output1]
+Name='output1'
+Range=[-1 1]
+NumMFs=3
+MF1='N':'trapmf',[-1.72 -1.08 -0.6 0]
+MF2='Z':'trimf',[-0.3 0 0.3]
+MF3='P':'trapmf',[0 0.6 1.08 1.72]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 1 (1) : 1
+2 1, 2 (1) : 1
+2 2, 2 (1) : 1
+3 1, 3 (1) : 1
+3 2, 3 (1) : 1
